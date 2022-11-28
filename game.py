@@ -1,8 +1,9 @@
 import pygame
+from library.Setting import *
 
 pygame.init()
 
-screen = pygame.display.set(800, 600)
+screen = pygame.display.set(lebar, tinggi)
 
 running = True
 while running:
