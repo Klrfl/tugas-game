@@ -1,8 +1,9 @@
-import pygame
+import pygame,sys
+from library.Setting import *
 
 pygame.init()
 
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set((800, 600))
 
 running = True
 while running:
