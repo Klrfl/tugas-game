@@ -1,5 +1,5 @@
 import pygame
-from tile import Tile
+from library.tile import Tile
 
 class Map:
   def __init__(self,level_map,surface):
