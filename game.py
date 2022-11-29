@@ -20,6 +20,8 @@ text_surface = test_font.render("tes", False, 'White')
 # clock obj for framerate
 clock = pygame.time.Clock()
 
+t = pygame.sprite.Group()
+
 running = True
 while running:
   for event in pygame.event.get():
