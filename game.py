@@ -4,14 +4,15 @@ from library.Setting import *
 pygame.init()
 
 # set screen
-screen = pygame.display.set_mode((1280, 700))
+screen = pygame.display.set_mode((lebar, tinggi))
 
 # set title
 pygame.display.set_caption('Mario clone')
 
 # set surfaces
-test_surface = pygame.Surface((100, 200))
-test_surface.fill("Red")
+sky_surface = pygame.image.load("asset/Sky.png")
+
+ground_surface = pygame.image.load("asset/Ground.png")
 
 test_font = pygame.font.Font(None, 50)
 text_surface = test_font.render("tes", False, 'White')
@@ -25,7 +26,8 @@ while running:
     if event.type == pygame.QUIT:
       running = False
   
-  screen.blit(test_surface, (200, 100))
-  screen.blit(text_surface, (300, 500))
+  screen.blit(sky_surface, (0, 0))
+  screen.blit(ground_surface, (0, 450))
+
   pygame.display.update()
   clock.tick(40)
