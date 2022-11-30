@@ -12,14 +12,16 @@ screen = pygame.display.set_mode((lebar, tinggi))
 pygame.display.set_caption('Mario clone')
 
 # set surfaces
-sky_surface = pygame.image.load("asset/Sky.png")
-ground_surface = pygame.image.load("asset/Ground.png")
+sky_surface = pygame.image.load("asset/Sky.png").convert()
+ground_surface = pygame.image.load("asset/Ground.png").convert()
 
+player_surface = pygame.image.load("asset/Sprite.png").convert()
+player_x_pos = 920
 # text
 test_font = pygame.font.Font(None, 50)
-text_surface = test_font.render("tes", False, 'White')
+text_surface = test_font.render("Mario clone", False, 'White')
 
-#test_tile = pygame.sprite.Group(Tile((200,100),200))
+# test_tile = pygame.sprite.Group(Tile((200,100),200))
 # map = Map(map,screen)
 
 # clock obj for framerate
@@ -32,10 +34,17 @@ while running:
     if event.type == pygame.QUIT:
       running = False
   
+  # render sky, ground, text
   screen.blit(sky_surface, (0, 0))
   screen.blit(ground_surface, (0, 450))
+
+  player_x_pos -= 1
+  screen.blit(player_surface, (player_x_pos, 380))
+
+  screen.blit(text_surface, (420, 50))
+
+  # test_tile.draw(screen)
+  # Map.exec()
   
-  #test_tile.draw(screen)
-  Map.exec()
   pygame.display.update()
   clock.tick(40)
