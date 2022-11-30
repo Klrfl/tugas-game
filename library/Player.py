@@ -6,4 +6,4 @@ class Animasi:
   def __init__(self):pass
   
   def karakter(self):
-    importKarakter = "asset/player"
+    importKarakter = "asset/Sprite.png"
