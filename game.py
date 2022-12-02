@@ -21,8 +21,7 @@ player_x_pos = 920
 test_font = pygame.font.Font(None, 50)
 text_surface = test_font.render("Mario clone", False, 'White')
 
-# test_tile = pygame.sprite.Group(Tile((200,100),200))
-# map = Map(map,screen)
+map = Map(map,screen)
 
 # clock obj for framerate
 clock = pygame.time.Clock()
@@ -42,9 +41,8 @@ while running:
   screen.blit(player_surface, (player_x_pos, 380))
 
   screen.blit(text_surface, (420, 50))
-
-  # test_tile.draw(screen)
-  # Map.exec()
+  
+  Map.run()
   
   pygame.display.update()
   clock.tick(40)
