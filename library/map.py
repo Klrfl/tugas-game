@@ -17,10 +17,7 @@ class Map:
           y = row_index * ukuran
           tile = Tile((x, y), ukuran)
           self.tiles.add(tile)
-
-    for row in layout:
-      print(row)
   
   def run(self):
-    self.Tile.update(0)
+    self.tiles.update(0)
     self.tiles.draw(self.display_surface)

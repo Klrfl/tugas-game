@@ -16,7 +16,7 @@ sky_surface = pygame.image.load("asset/Sky.png").convert()
 ground_surface = pygame.image.load("asset/Ground.png").convert()
 
 player_surface = pygame.image.load("asset/Sprite.png").convert()
-player_x_pos = 920
+player_x_pos = 0
 # text
 test_font = pygame.font.Font(None, 50)
 text_surface = test_font.render("Mario clone", False, 'White')
@@ -35,14 +35,14 @@ while running:
   
   # render sky, ground, text
   screen.blit(sky_surface, (0, 0))
-  screen.blit(ground_surface, (0, 450))
+  screen.blit(ground_surface, (0, 445))
 
-  player_x_pos -= 1
-  screen.blit(player_surface, (player_x_pos, 380))
+  player_x_pos += 0
+  screen.blit(player_surface, (player_x_pos, 375))
 
   screen.blit(text_surface, (420, 50))
   
-  Map.run()
+  map.run()
   
   pygame.display.update()
   clock.tick(40)
