@@ -6,7 +6,7 @@ map = [
   '               XX     X          ',
   '          XX   XX     XX         ',
   '     XX   XX   XX       XX       ',
-  '     XX   XX   XX   XXX          ',
+  '                                 ',
 ]
 
 ukuran = 64

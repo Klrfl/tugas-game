@@ -18,9 +18,21 @@ class Map:
           tile = Tile((x, y), ukuran)
           self.tiles.add(tile)
 
-    for row in layout:
-      print(row)
+  # def map_scroll_x(self):
+  #   player = self.player.sprite
+  #   player_x = player.rect.centerx
+  #   arah_x = player.direction.x
+
+  #   if player_x < 200 and arah_x < 0:
+  #     self.world_shift = 8
+  #     player.speed = 0
+  #   elif player_x > 200 and arah_x > 0:
+  #     self.world_shift = -8
+  #     player.speed = 0
+  #   else:
+  #     self.world_shift = 0
+  #     player.speed = 8
   
   def run(self):
-    # self.Tile.update(0)
+    self.Tile.update(0)
     self.tiles.draw(self.display_surface)
