@@ -34,5 +34,5 @@ class Map:
   #     player.speed = 8
   
   def run(self):
-    self.Tile.update(0)
+    self.tiles.update(0)
     self.tiles.draw(self.display_surface)
