@@ -22,5 +22,5 @@ class Map:
       print(row)
   
   def run(self):
-    self.Tile.update(0)
+    # self.Tile.update(0)
     self.tiles.draw(self.display_surface)
